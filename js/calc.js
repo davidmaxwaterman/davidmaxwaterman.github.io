@@ -115,20 +115,9 @@ var Calculator = {};
       }
     };
 
-    var _doMaximiseBody = function _doMaximiseBody() {
-      // apply scaling transform
-      var docWidth = document.documentElement.clientWidth;
-      var docHeight = document.documentElement.clientHeight;
-      var body = document.querySelector('body');
-      var bodyWidth = body.clientWidth;
-      var bodyHeight = body.clientHeight;
-
-      document.body.style['-webkit-transform'] = 'translate(-50%, -50%)          scale(' + docWidth / bodyWidth + ', ' + docHeight / bodyHeight + ')';
-      document.body.style.transform = 'translate(-50%, -50%)          scale(' + docWidth / bodyWidth + ', ' + docHeight / bodyHeight + ')';
-    };
-
     this.maximiseBody = function () {
-      window.requestAnimationFrame(_doMaximiseBody);
+      // doMaximiseBody is defined in index.html
+      window.requestAnimationFrame(doMaximiseBody);
     };
   }();
 
